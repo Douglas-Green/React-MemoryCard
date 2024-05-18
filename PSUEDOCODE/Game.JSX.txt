@@ -1,0 +1,86 @@
+/** @format */
+
+// Import necessary modules and components
+import { Component } from "react";
+import "./App.css";
+import CardView from "./CardView";
+import MemoryCards from "./MemoryCards";
+
+class Game extends Component {
+  state = {};
+
+  // Constructor to initialize the component
+  constructor(props) {
+    super(props);
+    bind necessary methods;
+    initialize memoryCards instance;
+  }
+
+  // Lifecycle method: called when the component is mounted
+  componentDidMount() {
+    initialize game state;
+  }
+
+  // Lifecycle method: called when the component is about to unmount
+  componentWillUnmount() {
+    clear any existing timeouts;
+  }
+
+  // Method to initialize the game state
+  initGame() {
+    generate a new set of cards;
+    set initial state for the game;
+  }
+
+  // Method to generate CardView components for each card
+  getCardViews() {
+    return map cards to CardView components;
+  }
+
+  // Method to clear cards after a delay
+  clearCards(id1, id2) {
+    if not exactly 2 clicks in a turn, return;
+    after 3 seconds:
+      flip first and second cards back;
+      reset turn state and allow clicks;
+  }
+
+  // Method to handle card click events
+  onCardClicked(id, image) {
+    if clicks are disabled, return;
+
+    if 0 or 2 clicks in a turn:
+      if 2 clicks:
+        clear existing timeout;
+        clear previous cards;
+      flip clicked card;
+      update state for first click;
+    else if 1 click in a turn:
+      flip clicked card;
+      update state for second click and disable further clicks;
+
+      if cards match:
+        mark both cards as matched;
+        update state for found pairs and allow clicks;
+      else:
+        set timeout to clear cards after 3 seconds;
+  }
+
+  // Method to handle Play Again button click
+  onPlayAgain() {
+    re-initialize the game state;
+  }
+
+  // Render method to display the game UI
+  render() {
+    generate card views;
+    determine game status;
+
+    if game complete:
+      show completion message and Play Again button;
+
+    return game UI with header, status, and card views;
+  }
+}
+
+export default Game;

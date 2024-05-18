@@ -1,0 +1,42 @@
+/** @format */
+
+// Import necessary modules
+import shuffle from "shuffle-array";
+
+class MemoryCards {
+  // Constructor to initialize the class
+  constructor() {
+    initialize cards array and number of images;
+  }
+
+  // Method to generate a set of cards with image pairs
+  generateCardSet() {
+    initialize cards array;
+    for each image:
+      create two card objects with the same image;
+      add both cards to the cards array;
+    shuffle the cards;
+  }
+
+  // Method to get a card by id
+  getCard(id) {
+    return find card in the cards array with matching id;
+  }
+
+  // Method to flip a card
+  flipCard(id, imageUp) {
+    set card's imageUp property based on id;
+  }
+
+  // Method to set a card as matched
+  setCardAsMatched(id, matched) {
+    set card's matched property based on id;
+  }
+
+  // Method to check if two cards have identical images
+  cardsHaveIdenticalImages(id1, id2) {
+    return true if both cards have the same image, else false;
+  }
+}
+
+export default MemoryCards;

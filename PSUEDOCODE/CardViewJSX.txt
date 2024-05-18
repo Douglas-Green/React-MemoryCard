@@ -1,0 +1,44 @@
+/** @format */
+
+// Import necessary modules and components
+import { Component } from "react";
+import PropTypes from "prop-types";
+import "./App.css";
+
+class CardView extends Component {
+  // Constructor to initialize the component
+  constructor(props) {
+    super(props);
+    bind onClick method;
+  }
+
+  // Method to handle card click event
+  onClick() {
+    if card is not matched or already flipped or disabled:
+      call onClick prop with card id and image;
+  }
+
+  // Render method to display the card
+  render() {
+    determine image path based on whether the card is flipped;
+    determine class name based on card state;
+
+    return card element with appropriate classes and image;
+  }
+}
+
+// Define prop types and default props
+CardView.propTypes = {
+  id: PropTypes.number.isRequired,
+  image: PropTypes.number.isRequired,
+  imageUp: PropTypes.bool.isRequired,
+  matched: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired,
+};
+
+CardView.defaultProps = {
+  disabled: false,
+};
+
+export default CardView;
